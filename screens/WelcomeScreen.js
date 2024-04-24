@@ -3,8 +3,11 @@ import React from 'react'
 import ScreenWrapper from '../components/screenWrapper'
 import { colors } from '../theme'
 import { useNavigation } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
 
 const WelcomeScreen = () => {
+    const { user } = useSelector(state => state.user)
+    console.log('maaaaaayank', user)
     const navigation = useNavigation()
     return (
         <ScreenWrapper>
